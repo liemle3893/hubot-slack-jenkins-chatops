@@ -1,10 +1,21 @@
 # ci_bot
 
 ### Run locally
-  HUBOT_SLACK_VERIFICATION_TOKEN=XXX HUBOT_JENKINS_URL="http://<jenkins_basic_auth>@<jenkins_host>:<jenkins_port" HUBOT_SLACK_TOKEN=xoxb-xxxx ./bin/hubot --adapter slack
+```shell
+$ HUBOT_SLACK_VERIFICATION_TOKEN=XXX \
+  HUBOT_JENKINS_URL="http://<jenkins_basic_auth>@<jenkins_host>:<jenkins_port>" \
+  HUBOT_SLACK_TOKEN=xoxb-xxxx \
+  ./bin/hubot --adapter slack
+```
 
 ### Docker run
-  docker run -it -p 8080:8080 --rm -e HUBOT_SLACK_VERIFICATION_TOKEN=${HUBOT_SLACK_VERIFICATION_TOKEN} -e HUBOT_JENKINS_URL=${HUBOT_JENKINS_URL} -e HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} saboteurkid/hubot-jenkins-slack
+```shell
+$ docker run -it -p 8080:8080 --rm \
+  -e HUBOT_SLACK_VERIFICATION_TOKEN=${HUBOT_SLACK_VERIFICATION_TOKEN} \
+  -e HUBOT_JENKINS_URL=${HUBOT_JENKINS_URL} \
+  -e HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN} \
+  saboteurkid/hubot-jenkins-slack
+```
 
 
 ### Environment variables
